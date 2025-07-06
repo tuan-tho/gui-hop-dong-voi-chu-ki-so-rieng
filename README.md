@@ -1,7 +1,7 @@
-🚀 Hệ Thống Truyền File Hợp Đồng An Toàn
+#🚀 GỬI HỢP ĐỒNG VỚI CHỮ KÝ SỐ RIÊNG
 
 
-**✨ Giới thiệu dự án**
+##**✨ Giới thiệu dự án**
 
 
 Đây là dự án bài tập lớn môn An Toàn Bảo Mật Thông Tin, tập trung xây dựng một hệ thống truyền tải file hợp đồng an toàn giữa Người gửi (Sender) và Người nhận (Receiver).
@@ -14,7 +14,7 @@ Dự án hiện thực hóa Đề tài 3: **Gửi hợp đồng với chữ ký 
 
 🤝 Xác thực (Authentication): Xác nhận file đến từ đúng người gửi.
 
-**Hệ thống của chúng tôi cho phép bạn**
+###**Hệ thống của chúng tôi cho phép bạn**
 
 🔑 Tạo và quản lý các cặp khóa RSA một cách dễ dàng.
 
@@ -26,7 +26,7 @@ Dự án hiện thực hóa Đề tài 3: **Gửi hợp đồng với chữ ký 
 
 🛠️ Cung cấp công cụ xác minh offline tiện lợi để kiểm tra chữ ký số độc lập.
 
-**🏗️ Cấu trúc dự án**
+## **🏗️ Cấu trúc dự án**
 
 
 Dự án được tổ chức gọn gàng và logic với các thành phần chính:
@@ -90,7 +90,7 @@ Kiểm tra tính toàn vẹn: Tạo giá trị băm của (IV || ciphertext) c�
 
 **Các thư viện Python tiêu chuẩn khác:** json, base64, os, datetime, threading, math hỗ trợ xử lý dữ liệu, quản lý file, thời gian và đa luồng.
 
-**🖥️ Giao diện ứng dụng**
+## **🖥️ Giao diện ứng dụng**
 
 
 Hệ thống cung cấp hai giao diện web trực quan cho SenderApp và ReceiverApp, dễ dàng truy cập qua trình duyệt.
@@ -131,7 +131,7 @@ Tiêu đề: **"ỨNG DỤNG NGƯỜI NHẬN HỢP ĐỒNG"**
 
 Công cụ dòng lệnh này cho phép xác minh tính toàn vẹn và xác thực của một phần file đã nhận một cách độc lập, bằng cách cung cấp khóa công khai của người gửi, Hash (Base64) và Chữ ký (Base64) từ log.
 
-🚀 **Hướng dẫn cài đặt và chạy chi tiết**
+## 🚀 **Hướng dẫn cài đặt và chạy chi tiết**
 
 
 Để chạy dự án này, bạn cần đảm bảo môi trường Python đã được thiết lập và các thư viện cần thiết đã được cài đặt.
