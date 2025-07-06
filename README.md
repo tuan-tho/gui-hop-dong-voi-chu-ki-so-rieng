@@ -1,7 +1,7 @@
-#🚀 GỬI HỢP ĐỒNG VỚI CHỮ KÝ SỐ RIÊNG
+# 🚀 GỬI HỢP ĐỒNG VỚI CHỮ KÝ SỐ RIÊNG
 
 
-##**✨ Giới thiệu dự án**
+## **✨ Giới thiệu dự án**
 
 
 Đây là dự án bài tập lớn môn An Toàn Bảo Mật Thông Tin, tập trung xây dựng một hệ thống truyền tải file hợp đồng an toàn giữa Người gửi (Sender) và Người nhận (Receiver).
@@ -14,7 +14,7 @@ Dự án hiện thực hóa Đề tài 3: **Gửi hợp đồng với chữ ký 
 
 🤝 Xác thực (Authentication): Xác nhận file đến từ đúng người gửi.
 
-###**Hệ thống của chúng tôi cho phép bạn**
+**Hệ thống của chúng tôi cho phép bạn**
 
 🔑 Tạo và quản lý các cặp khóa RSA một cách dễ dàng.
 
