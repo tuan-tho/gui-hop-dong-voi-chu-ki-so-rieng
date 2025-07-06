@@ -93,13 +93,12 @@ Kiểm tra tính toàn vẹn: Tạo giá trị băm của (IV || ciphertext) c�
 **🖥️ Giao diện ứng dụng**
 Hệ thống cung cấp hai giao diện web trực quan cho SenderApp và ReceiverApp, dễ dàng truy cập qua trình duyệt.
 
-**Giao diện SenderApp**
-Tiêu đề: **"ỨNG DỤNG NGƯỜI GỬI HỢP ĐỒNG"**
+Giao diện SenderApp
+Tiêu đề: "ỨNG DỤNG NGƯỜI GỬI HỢP ĐỒNG"
 
-![image](https://github.com/user-attachments/assets/abf5fc26-76fb-41c3-be75-55f3cb096f12)
+Hãy chèn ảnh chụp màn hình giao diện SenderApp tại đây.
 
-
-**Các thành phần chính:**
+Các thành phần chính:
 
 🔑 Quản Lý Khóa RSA: Tạo và tải khóa RSA (riêng tư của người gửi, công khai của người nhận).
 
@@ -109,12 +108,12 @@ Tiêu đề: **"ỨNG DỤNG NGƯỜI GỬI HỢP ĐỒNG"**
 
 📜 Nhật Ký Hoạt Động: Hiển thị chi tiết quá trình, bao gồm Hash (Base64) và Chữ ký (Base64) của từng phần file.
 
-**Giao diện ReceiverApp**
-Tiêu đề: **"ỨNG DỤNG NGƯỜI NHẬN HỢP ĐỒNG"**
+Giao diện ReceiverApp
+Tiêu đề: "ỨNG DỤNG NGƯỜI NHẬN HỢP ĐỒNG"
 
-![image](https://github.com/user-attachments/assets/960ed0a8-7bf5-43d8-b49c-acc17018a143)
+Hãy chèn ảnh chụp màn hình giao diện ReceiverApp tại đây.
 
-**Các thành phần chính:**
+Các thành phần chính:
 
 🔑 Quản Lý Khóa RSA: Tạo và tải khóa RSA (riêng tư của người nhận, công khai của người gửi).
 
@@ -122,50 +121,145 @@ Tiêu đề: **"ỨNG DỤNG NGƯỜI NHẬN HỢP ĐỒNG"**
 
 📜 Nhật Ký Hoạt Động: Hiển thị chi tiết quá trình nhận, xác minh, giải mã file.
 
-**Công cụ xác minh Offline (verify_tool.py)**
-![image](https://github.com/user-attachments/assets/05915f34-33da-4218-8dc6-951a27048d63)
-
+Công cụ xác minh Offline (verify_tool.py)
+Hãy chèn ảnh chụp màn hình giao diện Verify Tool tại đây (nếu có).
 
 Công cụ dòng lệnh này cho phép xác minh tính toàn vẹn và xác thực của một phần file đã nhận một cách độc lập, bằng cách cung cấp khóa công khai của người gửi, Hash (Base64) và Chữ ký (Base64) từ log.
 
-🚀 **Hướng dẫn cài đặt và chạy**
-**Clone repository**
+🚀 **Hướng dẫn cài đặt và chạy chi tiết**
+Để chạy dự án này, bạn cần đảm bảo môi trường Python đã được thiết lập và các thư viện cần thiết đã được cài đặt.
 
-git clone <địa chỉ repository của bạn>
-cd <tên thư mục dự án>
-
-
-**Tạo và kích hoạt môi trường ảo**
-
-python -m venv myenv
-.\myenv\Scripts\activate # Trên Windows PowerShell # source myenv/bin/activate # Trên Linux/macOS
+**Bước 1: Chuẩn bị môi trường**
 
 
-**Cài đặt các thư viện cần thiết**
+Cài đặt Python: Đảm bảo bạn đã cài đặt Python 3.13.5 (hoặc phiên bản 3.x tương thích) trên hệ thống của mình. Bạn có thể tải xuống từ trang web chính thức của Python: python.org.
 
-pip install Flask pycryptodome
+Clone Repository: Mở Terminal (trên Linux/macOS) hoặc PowerShell/Command Prompt (trên Windows) và thực hiện lệnh sau để tải dự án về máy tính của bạn:
 
+**⬇️ git clone <địa chỉ repository của bạn>**
 
-**Chạy ứng dụng Người nhận (ReceiverApp)**
-Mở một cửa sổ terminal/PowerShell mới, kích hoạt môi trường ảo và chạy:
+(Thay <địa chỉ repository của bạn> bằng URL kho GitHub của bạn.)
 
-.\myenv\Scripts\activate
-python receiver_app.py
+Di chuyển vào thư mục dự án:
 
+**📁 cd <tên_thư_mục_dự_án_của_bạn>**
 
-Truy cập http://127.0.0.1:5001 trong trình duyệt.
+(Ví dụ: cd he_thong_truyen_file_an_toan)
 
-**Chạy ứng dụng Người gửi (SenderApp)**
-Mở một cửa sổ terminal/PowerShell khác, kích hoạt môi trường ảo và chạy:
-
-.\myenv\Scripts\activate
-python sender_app.py
+**Bước 2: Thiết lập môi trường ảo**
 
 
-Truy cập http://127.0.0.1:5000 trong trình duyệt.
+Việc sử dụng môi trường ảo (virtual environment) là rất quan trọng để quản lý các thư viện Python của dự án một cách độc lập, tránh xung đột với các dự án khác.
 
-**Chạy công cụ xác minh Offline (Verify Tool)**
-Mở một cửa sổ terminal/PowerShell khác, kích hoạt môi trường ảo và chạy:
+**Tạo môi trường ảo:**
 
-.\myenv\Scripts\activate
-python verify_tool.py
+**📦 python -m venv myenv**
+
+Lệnh này sẽ tạo một thư mục có tên myenv (hoặc tên bất kỳ bạn muốn) chứa môi trường ảo.
+
+**Kích hoạt môi trường ảo:**
+
+**Trên Windows (PowerShell):**
+
+✅.\myenv\Scripts\activate
+
+**Trên Windows (Command Prompt):**
+
+✅myenv\Scripts\activate.bat
+
+**Trên Linux/macOS:**
+
+✅source myenv/bin/activate*
+
+Khi môi trường ảo được kích hoạt, bạn sẽ thấy (myenv) (hoặc tên môi trường ảo của bạn) xuất hiện ở đầu dòng lệnh.
+
+**Bước 3: Cài đặt các thư viện cần thiết**
+
+
+Sau khi môi trường ảo đã được kích hoạt, bạn cần cài đặt các thư viện Python mà dự án sử dụng:
+
+**⬇️pip install Flask pycryptodome**
+
+**Flask:** Framework web để xây dựng giao diện người dùng.
+
+**pycryptodome:** Thư viện mật mã cung cấp các thuật toán RSA, Triple DES, SHA-512, v.v.
+
+**Bước 4: Chạy ứng dụng**
+
+
+Bạn cần chạy ứng dụng Người nhận (ReceiverApp) và Người gửi (SenderApp) trên hai cửa sổ terminal/PowerShell/Command Prompt riêng biệt.
+
+**Chạy ứng dụng Người nhận (ReceiverApp):**
+
+**•** Mở một cửa sổ terminal/PowerShell/Command Prompt MỚI.
+
+**•** Di chuyển vào thư mục dự án của bạn (cd <tên_thư_mục_dự_án_của_bạn>).
+
+**•** Kích hoạt môi trường ảo (như Bước 2).
+
+**•** Chạy lệnh sau để khởi động ReceiverApp:
+
+**▶️python receiver_app.py**
+
+**•** Bạn sẽ thấy thông báo server đang chạy. Mở trình duyệt web của bạn và truy cập địa chỉ: http://127.0.0.1:5001 để xem giao diện ReceiverApp.
+
+**Chạy ứng dụng Người gửi (SenderApp):**
+
+**•** Mở một cửa sổ terminal/PowerShell/Command Prompt KHÁC (để chạy song song với ReceiverApp).
+
+**•** Di chuyển vào thư mục dự án của bạn (cd <tên_thư_mục_dự_án_của_bạn>).
+
+**•** Kích hoạt môi trường ảo (như Bước 2).
+
+**•** Chạy lệnh sau để khởi động SenderApp:
+
+**▶️python sender_app.py**
+
+**•** Mở trình duyệt web của bạn và truy cập địa chỉ: http://127.0.0.1:5000 để xem giao diện SenderApp.
+
+**Chạy công cụ xác minh Offline (verify_tool.py):**
+
+**•** Nếu bạn muốn sử dụng công cụ xác minh độc lập, mở một cửa sổ terminal/PowerShell/Command Prompt KHÁC nữa.
+
+**•** Di chuyển vào thư mục dự án của bạn.
+
+**•** Kích hoạt môi trường ảo (như Bước 2).
+
+**•** Chạy lệnh sau:
+
+**🔍python verify_tool.py**
+
+**•** Làm theo hướng dẫn trên màn hình để nhập các thông tin cần thiết (đường dẫn khóa công khai của người gửi, hash Base64 và chữ ký Base64 từ nhật ký hoạt động của SenderApp).
+
+**Bước 5: Sử dụng ứng dụng**
+
+
+Sau khi cả SenderApp và ReceiverApp đều đang chạy và bạn đã truy cập giao diện web của chúng:
+
+**Trên ReceiverApp** (http://127.0.0.1:5001):
+
+**•** Tạo hoặc tải lên "Khóa Riêng Tư Người Nhận" (receiver_private_key.pem).
+
+**•** Tạo hoặc tải lên "Khóa Công Khai Người Gửi" (sender_public_key.pem).
+
+**•** Nhập cổng server (ví dụ: 5001) và nhấn "Bắt Đầu Server".
+
+**Trên SenderApp** (http://127.0.0.1:5000):
+
+**•** Tạo hoặc tải lên "Khóa Riêng Tư Người Gửi" (sender_private_key.pem).
+
+**•** Tạo hoặc tải lên "Khóa Công Khai Người Nhận" (receiver_public_key.pem).
+
+**•** Nhập "Địa Chỉ Máy Nhận" (thường là 127.0.0.1) và "Cổng" (ví dụ: 5001) rồi nhấn "Kết Nối".
+
+**•** Sau khi kết nối thành công, chọn một file hợp đồng (ví dụ: contract.txt trong thư mục dự án của bạn) và nhấn "Gửi Hợp Đồng".
+
+**•** Quan sát "Nhật Ký Hoạt Động" trên cả hai ứng dụng để theo dõi quá trình. Đặc biệt, trên SenderApp, bạn sẽ thấy các chuỗi Hash (Base64) và Chữ ký (Base64) của từng phần file được hiển thị.
+
+**Xác minh với verify_tool.py:**
+
+**•** Sử dụng các chuỗi Hash (Base64) và Chữ ký (Base64) từ nhật ký của SenderApp.
+
+**•** Chạy verify_tool.py và dán các chuỗi này cùng với đường dẫn đến sender_public_key.pem để xác minh độc lập.
+
+Chúc bạn thành công với dự án của mình!
