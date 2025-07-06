@@ -1,5 +1,8 @@
 # 🚀 GỬI HỢP ĐỒNG VỚI CHỮ KÝ SỐ RIÊNG
 
+<p align="center">
+  <img src="logoDaiNam.png" alt="DaiNam University Logo" width="250"/>
+</p>
 
 ## **✨ Giới thiệu dự án**
 
