@@ -93,12 +93,13 @@ Kiểm tra tính toàn vẹn: Tạo giá trị băm của (IV || ciphertext) c�
 **🖥️ Giao diện ứng dụng**
 Hệ thống cung cấp hai giao diện web trực quan cho SenderApp và ReceiverApp, dễ dàng truy cập qua trình duyệt.
 
-Giao diện SenderApp
-Tiêu đề: "ỨNG DỤNG NGƯỜI GỬI HỢP ĐỒNG"
+**Giao diện SenderApp**
+Tiêu đề: **"ỨNG DỤNG NGƯỜI GỬI HỢP ĐỒNG"**
 
-Hãy chèn ảnh chụp màn hình giao diện SenderApp tại đây.
+![image](https://github.com/user-attachments/assets/42ab3307-137d-4cf8-9ca4-891073c469c0)
 
-Các thành phần chính:
+
+**Các thành phần chính:**
 
 🔑 Quản Lý Khóa RSA: Tạo và tải khóa RSA (riêng tư của người gửi, công khai của người nhận).
 
@@ -108,12 +109,13 @@ Các thành phần chính:
 
 📜 Nhật Ký Hoạt Động: Hiển thị chi tiết quá trình, bao gồm Hash (Base64) và Chữ ký (Base64) của từng phần file.
 
-Giao diện ReceiverApp
-Tiêu đề: "ỨNG DỤNG NGƯỜI NHẬN HỢP ĐỒNG"
+**Giao diện ReceiverApp**
+Tiêu đề: **"ỨNG DỤNG NGƯỜI NHẬN HỢP ĐỒNG"**
 
-Hãy chèn ảnh chụp màn hình giao diện ReceiverApp tại đây.
+![image](https://github.com/user-attachments/assets/dc7920cb-24e2-466f-a6e8-8f5b582d5777)
 
-Các thành phần chính:
+
+**Các thành phần chính:**
 
 🔑 Quản Lý Khóa RSA: Tạo và tải khóa RSA (riêng tư của người nhận, công khai của người gửi).
 
@@ -121,8 +123,9 @@ Các thành phần chính:
 
 📜 Nhật Ký Hoạt Động: Hiển thị chi tiết quá trình nhận, xác minh, giải mã file.
 
-Công cụ xác minh Offline (verify_tool.py)
-Hãy chèn ảnh chụp màn hình giao diện Verify Tool tại đây (nếu có).
+**Công cụ xác minh Offline (verify_tool.py)**
+![image](https://github.com/user-attachments/assets/a4183a4e-31b5-4cd5-bd3f-8fdf7658a781)
+
 
 Công cụ dòng lệnh này cho phép xác minh tính toàn vẹn và xác thực của một phần file đã nhận một cách độc lập, bằng cách cung cấp khóa công khai của người gửi, Hash (Base64) và Chữ ký (Base64) từ log.
 
